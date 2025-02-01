@@ -12,7 +12,7 @@ public class RatChasesCheese {
                 maze[i][j]=s.charAt(j);
             }
         }
-        
+        sc.close();
         int [] [] ans=new int[N][M];
 
         path(maze,0,0,ans);
