@@ -34,10 +34,15 @@ public class RatChasesCheese {
         
         maze[cr][cc]='X';
         ans[cr][cc]=1;
-        path(maze,cr-1,cc,ans);
-        path(maze,cr,cc-1,ans);
-        path(maze,cr+1,cc,ans);
-        path(maze,cr,cc+1,ans);
+        int [] r={-1,0,1,0};
+        int [] c={0,-1,0,1};
+        for(int i=0;i<r.length;i++){
+            path(maze,cr+r[i],cc+c[i],ans);
+        }
+        // path(maze,cr-1,cc,ans);
+        // path(maze,cr,cc-1,ans);
+        // path(maze,cr+1,cc,ans);
+        // path(maze,cr,cc+1,ans);
         maze[cr][cc]='O';
         ans[cr][cc]=0;
     }
