@@ -5,6 +5,7 @@ public class n_queen {
 		// TODO Auto-generated method stub
 		int n = 4;
 		boolean[][] board = new boolean[n][n];
+		
 		print(board, 0, n);
 	}
 	public static void print(boolean[][] board, int row, int tq) {
